@@ -21,8 +21,16 @@ Bring your Claude Code + Antigravity setup from vanilla to fully loaded. One com
 
 ## Quick Start
 
+### Windows (Martin & Norman — double-click and go)
+
+1. Clone or download this repo
+2. Double-click **`start.bat`**
+3. Pick your shell (Git Bash recommended) — the wizard launches automatically
+
+### Any Platform
+
 ```bash
-git clone <this-repo>
+git clone https://github.com/Upua/claude-workspace-setup.git
 cd claude-workspace-setup
 python install.py
 ```
@@ -48,7 +56,9 @@ python install.py --minimal        # Install essentials only (no hardware/MCPs)
 
 ## Windows Users
 
-The wizard supports Windows via **WSL** or **Git Bash**. Hook scripts require a bash-compatible shell — if you're running Claude Code in native PowerShell/cmd, hooks will be skipped automatically (everything else installs normally).
+**Just double-click `start.bat`** — it detects what you have (Git Bash, WSL, PowerShell), lets you pick, and launches the wizard. No terminal knowledge needed.
+
+Hook scripts require a bash-compatible shell. If neither Git Bash nor WSL is found, hooks are skipped automatically (everything else installs normally). For the full experience, install [Git for Windows](https://gitforwindows.org).
 
 ### Prerequisites on Windows
 
