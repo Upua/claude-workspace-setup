@@ -1,0 +1,49 @@
+# RPi Controller Configuration
+# Ladesäulen PoC - Raspberry Pi 5 Connection Settings
+
+connection:
+  host: 192.168.100.10
+  user: pi
+  password: ladesaule2026
+  local_static_ip: 192.168.100.1/24
+  ethernet_interface: enp0s31f6
+  ssh_opts: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=5"
+
+paths:
+  remote_base: ~/ladesaule-poc
+  local_base: /home/captain/code/work/ladesaeule/main/poc
+  venv: ~/ladesaule-poc/.venv
+  state_file: ~/ladesaule-poc/.claude-state.json
+
+dashboard:
+  port: 8080
+  user: norman
+  password: ladesaule2026
+  log_file: ~/dashboard.log
+
+monitor:
+  log_file: ~/poc_monitor.log
+  config: ~/ladesaule-poc/config.yaml
+
+services:
+  dashboard_cmd: |
+    cd ~/ladesaule-poc && \
+    source .venv/bin/activate && \
+    DASHBOARD_USER=norman DASHBOARD_PASS=ladesaule2026 \
+    nohup python -m uvicorn dashboard.app:app --host 0.0.0.0 --port 8080 > ~/dashboard.log 2>&1 &
+  monitor_cmd: |
+    cd ~/ladesaule-poc && \
+    source .venv/bin/activate && \
+    nohup python poc_monitor.py > ~/poc_monitor.log 2>&1 &
+
+camera:
+  device: /dev/video0
+  resolution: [1920, 1080]
+  fps: 10
+  autofocus_mode: macro
+
+health_thresholds:
+  cpu_temp_warn: 70
+  cpu_temp_critical: 80
+  memory_warn_percent: 80
+  disk_warn_percent: 85

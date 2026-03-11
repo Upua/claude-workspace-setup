@@ -1,0 +1,2 @@
+# No external dependencies - uses stdlib only
+# httpx can be added later for async/streaming support

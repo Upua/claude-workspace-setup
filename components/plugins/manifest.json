@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    {"id": "superpowers", "marketplace": "claude-plugins-official", "description": "Brainstorming, TDD, debugging workflows"},
+    {"id": "code-review", "marketplace": "claude-plugins-official", "description": "Structured code review"},
+    {"id": "pr-review-toolkit", "marketplace": "claude-plugins-official", "description": "PR review checklists"},
+    {"id": "feature-dev", "marketplace": "claude-plugins-official", "description": "Feature development workflows"},
+    {"id": "frontend-design", "marketplace": "claude-plugins-official", "description": "Frontend design/UI helpers"},
+    {"id": "plugin-dev", "marketplace": "claude-plugins-official", "description": "Plugin development tools"},
+    {"id": "claude-md-management", "marketplace": "claude-plugins-official", "description": "CLAUDE.md file management"},
+    {"id": "security-guidance", "marketplace": "claude-plugins-official", "description": "Security best practices"},
+    {"id": "supabase", "marketplace": "claude-plugins-official", "description": "Supabase backend integration"},
+    {"id": "rust-analyzer-lsp", "marketplace": "claude-plugins-official", "description": "Rust language server"}
+  ]
+}

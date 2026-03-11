@@ -1,0 +1,28 @@
+# Claude Code Workspace
+
+## Quick Reference
+- **Setup date:** Installed via Claude & Antigravity Workspace Setup Wizard
+- **OS:** $OS
+- **Python:** $PYTHON
+
+## Installed Components
+
+$HOOKS_COUNT hooks, $SKILLS_COUNT skills, $PLUGINS_COUNT plugins, $AGENTS_COUNT agents, $RULES_COUNT rules, $MCP_COUNT MCP servers.
+
+$COMPONENTS_TABLE
+
+## Coding Conventions
+- Conventional commits: `<type>(<scope>): <description>`
+- Python: Ruff, type hints, snake_case
+- Comments only for non-obvious logic
+
+## Key Paths
+
+| Path | Purpose |
+|------|---------|
+| `~/.claude/settings.json` | Hooks, permissions, plugins |
+| `~/.claude/skills/` | Skill definitions |
+| `~/.claude/agents/` | Agent definitions |
+| `~/.claude/rules/` | Coding rules |
+| `~/.claude/scripts/hooks/` | Hook scripts |
+| `~/.claude/mcp-servers/` | MCP server source |

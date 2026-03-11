@@ -1,0 +1,37 @@
+# CAD/3D Printing Skill
+# Modular skill family for OpenSCAD + FDM 3D printing projects
+
+name: cad-3d-printing
+description: >
+  OpenSCAD parametric design and FDM 3D printing. Use when designing
+  enclosures, housings, brackets, mounts, or any 3D-printable part.
+  Covers tolerances, materials, BOSL2 patterns, mesh validation,
+  and a render-verify-correct workflow.
+version: 1.0.0
+
+triggers:
+  - openscad
+  - scad
+  - 3d print
+  - stl
+  - housing
+  - enclosure
+  - fdm
+  - camera mount
+  - bracket
+  - snap-fit
+  - parametric
+
+tools:
+  required:
+    - openscad    # CLI rendering and validation
+    - admesh      # STL mesh analysis
+  optional:
+    - prusa-slicer  # Slice preview (future)
+
+libraries:
+  required:
+    - BOSL2  # ~/.local/share/OpenSCAD/libraries/BOSL2/
+  optional:
+    - NopSCADlib
+    - MCAD
